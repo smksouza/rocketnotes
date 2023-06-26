@@ -1,9 +1,15 @@
-import { Container } from './styles'
+import { Container } from "./styles";
 
-export function Details(){
-  return(
+import { Header } from "../../components/Header";
+import { Button } from "../../components/Button";
+
+
+export function Details() {
+  return (
     <Container>
-        <h1>Hello World!</h1>
+      <Header />
+      <h1>Hello World!</h1>
+      <Button title="Voltar"  />
     </Container>
-  )
+  );
 }
