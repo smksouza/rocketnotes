@@ -19,6 +19,10 @@ export function New() {
     setNewLink("");
   }
 
+  function handleRemoveLink(deleted) {
+    setLinks((prevState) => prevState.filter((link) => link !== deleted));
+  }
+
   return (
     <Container>
       <Header />
@@ -36,7 +40,7 @@ export function New() {
                 key={String(index)}
                 placeholder="Novo link"
                 value={link}
-                onClick={() => {}}
+                onClick={() => handleRemoveLink(link)}
               />
             ))}
             <NoteItem
